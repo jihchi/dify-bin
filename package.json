@@ -1,0 +1,27 @@
+{
+  "name": "dify",
+  "version": "0.0.1",
+  "description": "dify wrapper that makes it seamlessly available as a local dependency",
+  "license": "MIT",
+  "repository": "jihchi/dify-bin",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "bin": "cli.js",
+  "scripts": {
+  },
+  "files": [
+    "index.js",
+    "cli.js",
+    "lib"
+  ],
+  "keywords": [
+    "img",
+    "image"
+  ],
+  "dependencies": {
+    "bin-wrapper": "^3.0.0"
+  },
+  "devDependencies": {
+  }
+}
