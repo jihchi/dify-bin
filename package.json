@@ -7,7 +7,9 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "bin": "cli.js",
+  "bin": {
+    "dify": "cli.js"
+  },
   "main": "index.js",
   "scripts": {},
   "files": [
