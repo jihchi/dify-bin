@@ -11,11 +11,15 @@ $ npm install dify-bin
 ## Usage
 
 ```js
-const { execFile } = require('child_process');
 const dify = require('dify-bin');
 
-execFile(dify, ['left.jpg', 'right.jpg'], err => {
-	console.log('diff done!');
+dify(['left.jpg', 'right.jpg'], (err, out) => {
+  if (err) {
+    console.log(err.stderr);
+    process.exit(err.code);
+    return;
+  }
+  console.log('diff done!', out.stdout);
 });
 ```
 
