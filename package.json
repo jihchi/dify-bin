@@ -1,5 +1,5 @@
 {
-  "name": "dify",
+  "name": "dify-bin",
   "version": "0.0.1",
   "description": "dify wrapper that makes it seamlessly available as a local dependency",
   "license": "MIT",
