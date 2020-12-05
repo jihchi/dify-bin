@@ -7,17 +7,20 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "bin": "cli.js",
+  "bin": "lib/cli.js",
   "scripts": {
   },
   "files": [
-    "index.js",
-    "cli.js",
-    "lib"
+    "lib",
+    "vendor"
   ],
   "keywords": [
-    "img",
-    "image"
+    "image",
+    "visual",
+    "diff",
+    "regression",
+    "comparsion",
+    "snapshot"
   ],
   "dependencies": {
     "bin-wrapper": "^3.0.0"
