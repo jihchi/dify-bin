@@ -2,14 +2,13 @@
 
 > [dify](https://github.com/jihchi/dify) is a pixel-by-pixel image diffs tool
 
-# Install
+## Install
 
 ```sh
 $ npm install dify-bin
-$ yarn add dify-bin
 ```
 
-# Usage
+## Usage
 
 ```js
 const { execFile } = require('child_process');
@@ -20,7 +19,7 @@ execFile(dify, ['left.jpg', 'right.jpg'], err => {
 });
 ```
 
-# CLI
+## CLI
 
 ```sh
 $ npm install --global dify-bin
