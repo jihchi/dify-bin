@@ -1,2 +1,6 @@
 'use strict';
-module.exports = require('./lib').path();
+
+module.exports = function () {
+  var lib = require('./lib');
+  return lib.run.apply(lib, arguments);
+};

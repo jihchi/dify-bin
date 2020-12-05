@@ -1,8 +1,14 @@
 #!/usr/bin/env node
 'use strict';
 
-var spawn = require('child_process').spawn;
-var dify = require('./').path();
+var dify = require('./lib');
 var input = process.argv.slice(2);
 
-spawn(dify, input, { stdio: 'inherit' }).on('exit', process.exit);
+dify.run(input, function (err, out) {
+  if (err) {
+    console.error(err.stderr);
+    process.exit(err.code);
+    return;
+  }
+  console.log(out.stdout);
+});
