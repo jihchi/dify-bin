@@ -1,5 +1,8 @@
 # dify-bin 
 
+[![npm version](https://img.shields.io/npm/v/dify-bin.svg)](https://www.npmjs.com/package/dify-bin) 
+[![npm downloads](https://img.shields.io/npm/dm/dify-bin.svg)](https://www.npmjs.com/package/dify-bin) 
+
 > [dify](https://github.com/jihchi/dify) is a pixel-by-pixel image diffs tool
 
 ## Install
