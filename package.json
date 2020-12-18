@@ -11,6 +11,7 @@
     "dify": "cli.js"
   },
   "main": "index.js",
+  "types": "lib/index.d.ts",
   "scripts": {},
   "files": [
     "lib"
