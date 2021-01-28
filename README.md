@@ -16,7 +16,7 @@ $ npm install dify-bin
 ```js
 const dify = require('dify-bin');
 
-dify(['left.jpg', 'right.jpg', '--output', 'diff.png'], (err, out) => {
+dify(['--output', 'diff.png', 'left.jpg', 'right.jpg'], (err, out) => {
   if (err && !err.stderr) {
     console.log('Changes detected');
     return;
