@@ -17,12 +17,12 @@ $ npm install dify-bin
 const dify = require('dify-bin');
 
 dify(['--output', 'diff.png', 'left.jpg', 'right.jpg'], (err, out) => {
-  if (err && !err.stderr) {
-    console.log('Changes detected');
-    return;
-  }
   if (err) {
-    console.error(err.stderr);
+    if (err.isDifferent) {
+      console.log('Changes detected');
+    } else {
+      console.error(err.stderr);
+    }
     process.exit(err.code);
     return;
   }
