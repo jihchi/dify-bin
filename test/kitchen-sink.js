@@ -1,15 +1,15 @@
-const t = require('tap');
 const path = require('path');
+const tap = require('tap');
 const dify = require('../');
 
 const fixtures = path.resolve(__dirname, './fixtures/');
 
-t.test('the same', (t) => {
+tap.test('the same', (t) => {
   const left = path.resolve(fixtures, 'left.jpg');
   const right = path.resolve(fixtures, 'left.jpg');
 
   dify([left, right], (err, out) => {
-    t.error(err);
+    t.notOk(err);
     t.match(out, {
       stdout: '',
       stderr: '',
@@ -24,7 +24,32 @@ t.test('the same', (t) => {
   });
 });
 
-t.test('some different', (t) => {
+tap.test('error', (t) => {
+  const left = path.resolve(fixtures, 'left.jpg');
+  const right = path.resolve(fixtures, 'donky.png');
+
+  dify([left, right], (err, out) => {
+    t.match(
+      err.stderr,
+      /Error: failed to open right image "[^"]+"\n\nCaused by:\n/
+    );
+    t.match(err, {
+      stdout: '',
+      // stderr: '', separate test for this above
+      code: 1,
+      failed: true,
+      killed: false,
+      signal: null,
+      // cmd: '', // skipped
+      timedOut: false,
+      isDifferent: false,
+    });
+    t.notOk(out);
+    t.end();
+  });
+});
+
+tap.test('some different', (t) => {
   const left = path.resolve(fixtures, 'left.jpg');
   const right = path.resolve(fixtures, 'right.jpg');
 
@@ -38,6 +63,7 @@ t.test('some different', (t) => {
       signal: null,
       // cmd: '', // skipped
       timedOut: false,
+      isDifferent: true,
     });
     t.notOk(out);
     t.end();
