@@ -4,7 +4,7 @@
 var dify = require('./lib');
 var input = process.argv.slice(2);
 
-dify.run(input, function (err, out) {
+dify(input, function (err, out) {
   if (err) {
     console.error(err.stderr);
     process.exit(err.code);
