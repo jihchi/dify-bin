@@ -1,6 +1,6 @@
 {
   "name": "dify-bin",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "dify wrapper that makes it seamlessly available as a local dependency",
   "license": "MIT",
   "repository": "jihchi/dify-bin",
