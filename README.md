@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/dify-bin.svg)](https://www.npmjs.com/package/dify-bin) 
 [![npm downloads](https://img.shields.io/npm/dm/dify-bin.svg)](https://www.npmjs.com/package/dify-bin) 
 
-> [dify](https://github.com/jihchi/dify) is a pixel-by-pixel image diffs tool
+> [dify](https://github.com/jihchi/dify) is a fast pixel-by-pixel image comparison tool in Rust.
 
 ## Install
 
@@ -32,11 +32,18 @@ dify(['--output', 'diff.png', 'left.jpg', 'right.jpg'], (err, out) => {
 
 ## CLI
 
+### npx
+
 ```sh
-$ npm install --global dify-bin
+npx dify-bin --help
+```
+
+### Installation 
+```sh
+npm install --global dify-bin
 ```
 
 ```sh
-$ dify --help
+dify --help
 ```
 
