@@ -13,7 +13,7 @@
   "main": "index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "tap"
+    "test": "tap --no-check-coverage"
   },
   "files": [
     "lib"
