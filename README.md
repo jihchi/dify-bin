@@ -8,7 +8,7 @@
 ## Install
 
 ```sh
-$ npm install dify-bin
+npm install dify-bin
 ```
 
 ## Usage
